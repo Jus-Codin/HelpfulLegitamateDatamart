@@ -203,8 +203,8 @@ var list_dir = new Command(
         }
         return dirs.join("<br>")
     },
-    name = "ls",
-    help = "List all files in directory"
+    "ls",
+    "List all files in directory"
 );
 
 var get_help = new Command(
@@ -222,8 +222,8 @@ var get_help = new Command(
         }
         return table.concat("</table>")
     },
-    name = "help",
-    help = "Shows this message"
+    "help",
+    "Shows this message"
 );
 
 function cd(args){
@@ -255,9 +255,9 @@ function cd(args){
 
 var chng_dir = new Command(
     cd,
-    name = "cd",
-    help = "Change directory to another folder",
-    autocomplete = true
+    "cd",
+    "Change directory to another folder",
+    true
 );
 
 var cat = new Command(
@@ -292,9 +292,9 @@ var cat = new Command(
             return '<span style="color:red;">cat: no such file or directory: '.concat(args, "</span>")
         }
     },
-    name = "cat",
-    help = "Outputs content of file. Usage: cat (filename with extension)",
-    autocomplete = true
+    "cat",
+    "Outputs content of file. Usage: cat (filename with extension)",
+    true
 );
 
 var clear = new Command(
@@ -302,8 +302,8 @@ var clear = new Command(
         document.getElementById("history").innerHTML = ""
         return ""
     },
-    name = "clear",
-    help = "Clears all text on screen"
+    "clear",
+    "Clears all text on screen"
 );
 
 let commands = {
