@@ -19,7 +19,7 @@ let filesystem = {
     }
 }
 
-let commands = {
+var commands = {
     "ls" : list_dir,
     "help" : get_help,
     "cd" : chng_dir,
