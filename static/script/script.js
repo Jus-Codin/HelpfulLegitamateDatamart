@@ -153,7 +153,7 @@ function invoke_command(){
     let newprompt = document.getElementsByClassName('command')[document.getElementsByClassName('command').length-1]
     newprompt.focus();
     var dir = document.getElementsByClassName('dir')[document.getElementsByClassName('dir').length-1]
-    dir.innerHTML = (currentdirectory.length>0) ? currentdirectory[currentdirectory.length-1]:"root"
+    dir.innerHTML = (currentdir.length>0) ? currentdir[currentdir.length-1]:"root"
 
 }
 
