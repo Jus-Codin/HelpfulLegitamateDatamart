@@ -46,7 +46,7 @@ function autocomplete(){
     var s = document.getElementsByClassName("command")
     var current = s[s.length-1]
     var cd = cwd()
-    var cmd=current.innerHTML.replace(/[<]br[^>]*[>]/gi,"").replace(/&nbsp;/g,' ').trim().split(" ");
+    var cmd = current.innerHTML.replace(/[<]br[^>]*[>]/gi,"").replace(/&nbsp;/g,' ').trim().split(" ");
     if (cmd.length > 0 && cmd[0] in ac){
         var possible = []
         for (const fn in cd) {
@@ -165,8 +165,8 @@ class Command {
      * @param {String} help
      * @param {Boolean} autocomplete 
      */
-    constructor(func, help, name=null, autocomplete=false){
-        this.name = name ?? func.name;
+    constructor(func, name, help, autocomplete=false){
+        this.name = name;
         this._func = func;
         this.help = help
         this.autocomplete = autocomplete
@@ -265,7 +265,7 @@ var cat = new Command(
     function (args){
         var current = cwd()
         res = "";
-        if (args in current){
+        if (current[args] != undefined){
             if (current[args].constructor != Object){
                 let dir = currentdir.join("/")
                 res = ""
@@ -292,7 +292,7 @@ var cat = new Command(
             return '<span style="color:red;">cat: no such file or directory: '.concat(args, "</span>")
         }
     },
-    name = "cd",
+    name = "cat",
     help = "Outputs content of file. Usage: cat (filename with extension)",
     autocomplete = true
 );
@@ -310,5 +310,6 @@ let commands = {
     "ls" : list_dir,
     "help" : get_help,
     "cd" : chng_dir,
-    "cat" : cat
+    "cat" : cat,
+    "clear" : clear
 }
