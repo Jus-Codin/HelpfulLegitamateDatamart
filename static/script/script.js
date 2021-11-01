@@ -149,7 +149,7 @@ function invoke_command(){
     for (const key in commands){
         if (command.split(" ")[0] == key){
             hist_i += 1
-            history = history.slice(0, hist_1);
+            history = history.slice(0, hist_i);
             history.push(command)
             output = commands[key].invoke(command.substring(key.length+1))
         }
