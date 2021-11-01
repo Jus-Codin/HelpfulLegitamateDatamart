@@ -262,7 +262,7 @@ var chng_dir = new Command(
 
 var cat = new Command(
     function (args){
-        console.log(args)
+        console.log(args);
         var current = cwd()
         res = "";
         if (current[args] != undefined){
@@ -270,7 +270,7 @@ var cat = new Command(
                 let dir = currentdir.join("/")
                 res = ""
                 let path = "".concat("/root/", dir, (dir!="") ? "/" : "", current[args])
-                console.log(path)
+                console.log(path);
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", path, false)
                 xhr.onload = function (e){
