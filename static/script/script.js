@@ -1,4 +1,4 @@
-let cursor="█"
+let carat="█"
 let prompt;
 var currentdir=[]
 var timer;
