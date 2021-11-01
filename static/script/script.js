@@ -231,33 +231,35 @@ var get_help = new Command(
     help = "Shows this message"
 );
 
-var chng_dir = new Command(
-    function (args){
-        if (args == "") {
-            currentdir = []
-            return ""
-        }
-        args = args.split("/")
-
-        var current = cwd()
-        let x = args.shift().replace(/[<]br[^>]*[>]/gi,"");
-
-        if (x == ".." && currentdir.length > 0) {
-            currentdir.pop()
-        } else if (x in current) {
-            if (current[x].constructor == Object){
-                currentdir.push(x)
-            } else {
-                return '<span style="color:red;">cd: not a directory: '.concat(x, "</span>")
-            }
-        } else {
-            return '<span style="color:red;">cd: no such file or directory: '.concat(x, "</span> ")
-        }
-        if (args.length > 0) {
-            return chng_dir.func(args)
-        }
+function cd(args){
+    if (args == "") {
+        currentdir = []
         return ""
-    },
+    }
+    args = args.split("/")
+
+    var current = cwd()
+    let x = args.shift().replace(/[<]br[^>]*[>]/gi,"");
+
+    if (x == ".." && currentdir.length > 0) {
+        currentdir.pop()
+    } else if (x in current) {
+        if (current[x].constructor == Object){
+            currentdir.push(x)
+        } else {
+            return '<span style="color:red;">cd: not a directory: '.concat(x, "</span>")
+        }
+    } else {
+        return '<span style="color:red;">cd: no such file or directory: '.concat(x, "</span> ")
+    }
+    if (args.length > 0) {
+        return cd(args)
+    }
+    return ""
+}
+
+var chng_dir = new Command(
+    cd,
     name = "cd",
     help = "Change directory to another folder",
     autocomplete = true
