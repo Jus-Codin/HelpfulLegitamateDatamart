@@ -164,7 +164,7 @@ class Command {
      * @param {String} help
      * @param {Boolean} autocomplete 
      */
-    constructor(func, name, help, autocomplete=false){
+    constructor(func, name, help, autocomplete){
         this.name = name;
         this._func = func;
         this.help = help
@@ -204,7 +204,8 @@ var list_dir = new Command(
         return dirs.join("<br>")
     },
     "ls",
-    "List all files in directory"
+    "List all files in directory",
+    false
 );
 
 var get_help = new Command(
@@ -223,7 +224,8 @@ var get_help = new Command(
         return table.concat("</table>")
     },
     "help",
-    "Shows this message"
+    "Shows this message",
+    false
 );
 
 function cd(args){
@@ -262,7 +264,6 @@ var chng_dir = new Command(
 
 var cat = new Command(
     function (args){
-        console.log(args);
         var current = cwd()
         res = "";
         if (current[args] != undefined){
@@ -270,7 +271,6 @@ var cat = new Command(
                 let dir = currentdir.join("/")
                 res = ""
                 let path = "".concat("/HelpfulLegitamateDatamart/root/", dir, (dir!="") ? "/" : "", current[args])
-                console.log(path);
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", path, false)
                 xhr.onload = function (e){
@@ -303,7 +303,8 @@ var clear = new Command(
         return ""
     },
     "clear",
-    "Clears all text on screen"
+    "Clears all text on screen",
+    false
 );
 
 let commands = {
