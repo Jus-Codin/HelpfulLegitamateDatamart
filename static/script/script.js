@@ -254,7 +254,7 @@ var chng_dir = new Command(
             return '<span style="color:red;">cd: no such file or directory: '.concat(x, "</span> ")
         }
         if (args.length > 0) {
-            return chng_dir.invoke(args)
+            return chng_dir.func(args)
         }
         return ""
     },
