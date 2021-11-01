@@ -19,13 +19,6 @@ let filesystem = {
     }
 }
 
-var commands = {
-    "ls" : list_dir,
-    "help" : get_help,
-    "cd" : chng_dir,
-    "cat" : cat
-}
-
 //lol stolen func
 //apparently we're just code theives now
 function setEndOfContenteditable(contentEditableElement)
@@ -312,3 +305,10 @@ var clear = new Command(
     name = "clear",
     help = "Clears all text on screen"
 );
+
+let commands = {
+    "ls" : list_dir,
+    "help" : get_help,
+    "cd" : chng_dir,
+    "cat" : cat
+}
