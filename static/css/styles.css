@@ -1,0 +1,59 @@
+body{
+    color:#fff;
+    font-family: 'IBM Plex Mono';
+}
+#terminal{
+    z-index: 1000;
+    position: relative;
+    margin: auto;
+
+    background-color: #333;
+    -webkit-border-radius: 10px;
+    -moz-border-radius: 10px;
+    border-radius: 10px;
+    max-width: 75ch;
+    max-height: 50ch;
+    height:100%;
+    width:100%;
+    
+    overflow: hidden;
+}
+#navbar{
+    padding-left: 1rem;
+    padding-right: 1rem;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: #ddd;
+    height:1.5rem;
+}
+p{
+    color: #fff;
+}
+#texts{
+    left: 0px;
+    word-wrap: break-word;
+    padding: 0rem 1rem 1rem 1rem;
+    color: #fff;
+    width: 95%;
+    height: 90%;
+    overflow: auto;
+    
+}
+.command br{
+    display:none;
+}
+#foot{
+    height: fit-content;
+
+    
+    left: 0;
+    position: absolute;
+    text-align: center;
+    bottom: 1rem;
+    width: 100%;
+    vertical-align: bottom;
+}
+a{
+    color:greenyellow;
+}
