@@ -174,12 +174,15 @@ class Command {
      */
     constructor(func, help, name=null, autocomplete=false){
         this.name = name ?? func.name;
-        this.func = func;
+        this._func = func;
         this.help = help
         this.autocomplete = autocomplete
         if (this.autocomplete){
             ac.push(this.name)
         }
+    }
+    get func(){
+        return this._func
     }
 }
 
