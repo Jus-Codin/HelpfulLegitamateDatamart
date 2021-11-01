@@ -151,7 +151,7 @@ function invoke_command(){
             hist_i += 1
             history = history.slice(0, hist_i);
             history.push(command)
-            output = commands[key].invoke(command.substring(key.length+1))
+            output = commands[key].func(command.substring(key.length+1))
         }
     }
 
@@ -180,9 +180,6 @@ class Command {
         if (this.autocomplete){
             ac.push(this.name)
         }
-    }
-    invoke(args){
-        return this.func(args)
     }
 }
 
