@@ -4,7 +4,6 @@ var currentdir=[]
 var timer;
 let res;
 let responset;
-let done;
 let history=[];
 let hist_i = 0;
 let filesystem = {
@@ -263,14 +262,15 @@ var chng_dir = new Command(
 
 var cat = new Command(
     function (args){
+        console.log(args)
         var current = cwd()
         res = "";
         if (current[args] != undefined){
             if (current[args].constructor != Object){
                 let dir = currentdir.join("/")
                 res = ""
-                done = true
                 let path = "".concat("/root/", dir, (dir!="") ? "/" : "", current[args])
+                console.log(path)
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", path, false)
                 xhr.onload = function (e){
