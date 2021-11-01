@@ -215,9 +215,9 @@ var get_help = new Command(
         for (const key in commands) {
             table = table.concat(
                 "<tr><td>",
-                keys,
+                key,
                 "</td><td>",
-                commands[keys].help,
+                commands[key].help,
                 "</td></tr>"
             )
         }
