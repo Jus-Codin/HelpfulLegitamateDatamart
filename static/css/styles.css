@@ -4,6 +4,7 @@ body{
 }
 #terminal{
     z-index: 1000;
+    display: block;
     position: absolute;
 
     float: left;
@@ -60,6 +61,10 @@ li button{
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
+    border: 0;
+    background: none;
+    box-shadow: none;
+    border-radius: 0px;
 }
 li button:hover{
     background-color: #111;
