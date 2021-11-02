@@ -1,4 +1,5 @@
 body{
+    padding: 0;
     color:#fff;
     font-family: 'IBM Plex Mono';
 }
@@ -10,7 +11,6 @@ body{
     float: left;
 
     background-color: #333;
-    max-height: 50ch;
     height:100%;
     width:100%;
     
