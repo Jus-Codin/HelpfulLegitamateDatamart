@@ -15,16 +15,7 @@ body{
     width:100%;
     
     overflow: hidden;
-}
-#navbar{
-    padding-left: 1rem;
-    padding-right: 1rem;
-    position: relative;
-    top: 0;
-    left: 0;
-    background-color: #ddd;
-    height:1.5rem;
-}
+} height:1.5rem;
 p{
     color: #fff;
 }
@@ -39,7 +30,7 @@ p{
     
 }
 .command br{
-    display:none;
+    display: none;
 }
 ul{
     list-style-type: none;
