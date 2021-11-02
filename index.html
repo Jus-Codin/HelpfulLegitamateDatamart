@@ -12,6 +12,20 @@
     </head>
     <body style="background-color:#555" onload="load()" onresize="load()">
 
+        <div id="terminal"  onclick="document.getElementsByClassName('command')[document.getElementsByClassName('command').length-1].focus();">
+            <div id="texts">
+                <p style="color:#00FF00">
+                    <span id="history">
+                    enter 'help' to get started!<br>
+                    <span id=prompt>
+                        <span class="dir" style="color:#2277ff">root</span>
+                        <span style="color:#ff0000;">$</span>
+                    <span spellcheck="false" class="command" contenteditable="true" class="input" style="caret-color: transparent; max-width:50%;overflow: auto;" onKeyPress="checkkey(event.keyCode)"></span></span></span><span id="cursorblink" ></span>
+    
+                </p>
+            </div>
+        </div>
+
         <ul>
             <li><button id="about">About</button></li>
         </ul>
@@ -23,20 +37,6 @@
                     Made with <span style="color:red;">♡</span> by <a href="https://github.com/Jus-Codin" style="color:greenyellow;z-index:10000;">Jus-Codin</a> <br>
                     A bad replica of <a href="https://github.com/codebytere/codebytere.github.io" style="color:greenyellow">codebytere's</a> <br>
                     Thanks to <a href="https://github.com/jer123se12" style="color:greenyellow">jer123se12's</a> help with some of the code (quite a lot ngl)
-                </p>
-            </div>
-        </div>
-
-        <div id="terminal"  onclick="document.getElementsByClassName('command')[document.getElementsByClassName('command').length-1].focus();">
-            <div id="texts">
-                <p style="color:#00FF00">
-                    <span id="history">
-                    enter 'help' to get started!<br>
-                    <span id=prompt>
-                        <span class="dir" style="color:#2277ff">root</span>
-                        <span style="color:#ff0000;">$</span>
-                    <span spellcheck="false" class="command" contenteditable="true" class="input" style="caret-color: transparent; max-width:50%;overflow: auto;" onKeyPress="checkkey(event.keyCode)"></span></span></span><span id="cursorblink" ></span>
-    
                 </p>
             </div>
         </div>
