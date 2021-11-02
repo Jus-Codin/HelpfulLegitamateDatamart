@@ -5,9 +5,9 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge">
         <title>Just a website</title>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=IBM Plex Mono">
-        <link rel="stylesheet" href="styles.css">
-        <script src="script.js"></script>
-        <link rel="icon" href="favicon.png"sizes="512x512" type="image/png">
+        <link rel="stylesheet" href="static/css/styles.css">
+        <script src="static/script/script.js"></script>
+        <link rel="icon" href="static/img/favicon.png"sizes="512x512" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body style="background-color:#555;height:95vh" onload="load()" onresize="load()">
@@ -25,8 +25,39 @@
     
                 </p>
             </div>
+
+        <ul>
+            <li><button id="about">About</button></li>
+        </ul>
     
-    
+        <div id="about-popup" class="popup">
+            <div class="popup-content">
+                <span class="close">&times:</span>
+                <p>
+                    Made with <span style="color:red;">♡</span> by <a href="https://github.com/Jus-Codin" style="color:greenyellow;z-index:10000;">Jus-Codin</a> <br>
+                    A bad replica of <a href="https://github.com/codebytere/codebytere.github.io" style="color:greenyellow">codebytere's</a> <br>
+                    Thanks to <a href="https://github.com/jer123se12" style="color:greenyellow">jer123se12</a>'s help with some of the code (quite a lot ngl)
+                </p>
+            </div>
+        </div>
+
+        <script>
+            var popup = document.getElementById("about-popup");
+            var btn = document.getElementById("about");
+            var span = document.getElementsByClassName("close")[0];
+            btn.onclick = function(){
+                popup.style.display = "block";             
+            }
+            span.onclick = function(){
+                popup.style.display = "none";
+            }
+            window.onclick = function(event) {
+                if (event.target == popup) {
+                    popup.style.display = "none";
+                }
+            }
+        </script>
+
         </div>
         <div id="foot">
             <p style="color:#eee">
