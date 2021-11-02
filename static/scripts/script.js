@@ -115,7 +115,6 @@ function load(){
     }else{
         t.style.width="100%"
         t.style.height="100%"
-        t.style.margin="auto"
     }
     prompt=document.getElementById("prompt").innerHTML;
     timer=setInterval(() => {
