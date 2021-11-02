@@ -103,8 +103,6 @@ function load(){
     clearInterval(timer)
     let t = document.getElementById("terminal")
     if (innerWidth < 500){
-
-        t.style.position="absolute"
         t.style.margin="0px"
         t.style.right="0px"
         t.style.top="0px"
