@@ -115,7 +115,7 @@ function load(){
     }else{
         t.style.borderRadius="10px"
         t.style.width="100%"
-        t.style.height="90%"
+        t.style.height="100%"
         t.style.margin="auto"
     }
     prompt=document.getElementById("prompt").innerHTML;
