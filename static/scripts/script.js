@@ -110,7 +110,6 @@ function load(){
         t.style.top="0px"
         t.style.left="0px"
         t.style.width="100vw"
-        t.style.height="50vh"
         t.style.borderRadius="0px"
     }else{
         t.style.width="100%"
