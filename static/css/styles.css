@@ -6,7 +6,6 @@ body{
 #terminal{
     z-index: 1000;
     display: block;
-    position: absolute;
 
     float: left;
 
