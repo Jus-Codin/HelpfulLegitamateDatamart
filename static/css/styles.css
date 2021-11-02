@@ -5,15 +5,14 @@ body{
     font-family: 'IBM Plex Mono';
 }
 #terminal{
-    z-index: 1000;
+    z-index: 10;
     position: relative;
-    display: block;
+    display: block flex;
+    flex-direction: column-reverse;
 
     background-color: #333;
-    min-height: 100%;
+    height: 100vh;
     width: 100%;
-    
-    overflow: hidden;
 }
 p{
     color: #fff;
@@ -33,11 +32,12 @@ p{
 }
 ul{
     list-style-type: none;
+    z-index: 10;
     margin: 0;
     padding: 0;
     overflow: hidden;
-    background-color: #333;
-    position: fixed;
+    background-color: #222;
+    position: fixed relative;
     bottom: 0;
     width: 100%;
 }
@@ -46,7 +46,7 @@ li{
 }
 li button{
     display: block;
-    background-color: #333;
+    background-color: #222;
     color: #fff;
     text-align: center;
     padding: 14px 16px;
@@ -62,16 +62,16 @@ li button:hover{
 .popup{
     display: none;
     position: fixed;
+    z-index: 100;
     left: 0;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    color: #333;
-    background-color: rgba(1,1,1,0.4)
+    background-color: rgba(0,0,0,0.5)
 }
 .popup-content{
-    background-color: #fefefe;
+    background-color: #333;
     margin: 15% auto;
     padding: 20px;
     border: 1px solid #888;
@@ -85,7 +85,7 @@ li button:hover{
 }
 .close:hover,
 .close:focus {
-  color: black;
+  color: red;
   text-decoration: none;
   cursor: pointer;
 }

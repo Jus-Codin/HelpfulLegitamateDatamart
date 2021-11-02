@@ -10,8 +10,7 @@
         <link rel="icon" href="static/img/favicon.png"sizes="512x512" type="image/png">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
-    <body style="background-color:#555" onload="load()" onresize="load()">
-
+    <body style="background-color:#333" onload="load()" onresize="load()">
         <div id="terminal"  onclick="document.getElementsByClassName('command')[document.getElementsByClassName('command').length-1].focus();">
             <div id="texts">
                 <p style="color:#00FF00">
@@ -24,11 +23,12 @@
     
                 </p>
             </div>
-        </div>
 
-        <ul>
-            <li><button id="about">About</button></li>
-        </ul>
+                <ul>
+                    <li><button id="about">About</button></li>
+                </ul>
+
+        </div>
     
         <div id="about-popup" class="popup">
             <div class="popup-content">

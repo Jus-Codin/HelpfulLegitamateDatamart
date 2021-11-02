@@ -102,17 +102,6 @@ function load(){
 
     clearInterval(timer)
     let t = document.getElementById("terminal")
-    if (innerWidth < 500){
-        t.style.margin="0px"
-        t.style.right="0px"
-        t.style.top="0px"
-        t.style.left="0px"
-        t.style.width="100vw"
-        t.style.borderRadius="0px"
-    }else{
-        t.style.width="100%"
-        t.style.height="100%"
-    }
     prompt=document.getElementById("prompt").innerHTML;
     timer=setInterval(() => {
         var c=document.getElementById("cursorblink")
