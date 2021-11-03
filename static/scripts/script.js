@@ -45,19 +45,14 @@ function autocomplete(){
     var s = document.getElementsByClassName("command")
     var current = s[s.length-1]
     var cd = cwd()
-    console.log(cd);
     var cmd = current.innerHTML.replace(/[<]br[^>]*[>]/gi,"").replace(/&nbsp;/g,' ').trim().split(" ");
-    console.log(cmd);
-    console.log(ac.includes(cmd[0]))
     if (cmd.length > 0 && ac.includes(cmd[0])){
         var possible = []
         for (var fn in cd) {
             if (fn.includes(cmd[cmd.length-1])){
-                console.log(fn);
                 possible.push(fn);
             }
         }
-        console.log(possible);
         if (possible.length == 1){
             cmd.pop()
             current.innerHTML = cmd.concat(possible).join(" ");
