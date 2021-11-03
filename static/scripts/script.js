@@ -42,9 +42,7 @@ function setEndOfContenteditable(contentEditableElement)
 }
 
 function autocomplete(){
-    console.log("autocompleting...");
     var s = document.getElementsByClassName("command")
-    console.log(s);
     var current = s[s.length-1]
     var cd = cwd()
     console.log(cd);
@@ -52,7 +50,7 @@ function autocomplete(){
     console.log(cmd);
     if (cmd.length > 0 && cmd[0] in ac){
         var possible = []
-        for (const fn in cd) {
+        for (var fn in cd) {
             if (fn.includes(cmd[cmd.length-1])){
                 possible.push(fn)
             }
