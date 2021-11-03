@@ -48,6 +48,7 @@ function autocomplete(){
     console.log(cd);
     var cmd = current.innerHTML.replace(/[<]br[^>]*[>]/gi,"").replace(/&nbsp;/g,' ').trim().split(" ");
     console.log(cmd);
+    console.log(ac.includes(cmd[0]))
     if (cmd.length > 0 && ac.includes(cmd[0])){
         var possible = []
         for (var fn in cd) {
