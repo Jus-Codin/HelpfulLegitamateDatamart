@@ -36,7 +36,6 @@ footer{
     position: absolute;
     width: 100%;
     bottom: 0;
-    font-family: 'IBM Plex Mono';
 }
 ul{
     list-style-type: none;
@@ -62,6 +61,7 @@ li button{
     background: none;
     box-shadow: none;
     border-radius: 0px;
+    font-family: 'IBM Plex Mono';
 }
 li button:hover{
     background-color: #111;
