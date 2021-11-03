@@ -42,10 +42,14 @@ function setEndOfContenteditable(contentEditableElement)
 }
 
 function autocomplete(){
+    console.log("autocompleting...");
     var s = document.getElementsByClassName("command")
+    console.log(s);
     var current = s[s.length-1]
     var cd = cwd()
+    console.log(cd);
     var cmd = current.innerHTML.replace(/[<]br[^>]*[>]/gi,"").replace(/&nbsp;/g,' ').trim().split(" ");
+    console.log(cmd);
     if (cmd.length > 0 && cmd[0] in ac){
         var possible = []
         for (const fn in cd) {
@@ -53,6 +57,7 @@ function autocomplete(){
                 possible.push(fn)
             }
         }
+        console.log(possible);
         if (possible.length == 1){
             cmd.pop()
             current.innerHTML = cmd.concat(possible).join(" ");
