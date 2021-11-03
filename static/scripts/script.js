@@ -52,7 +52,7 @@ function autocomplete(){
         var possible = []
         for (var fn in cd) {
             if (fn.includes(cmd[cmd.length-1])){
-                possible.push(fn)
+                possible.push(fn);
             }
         }
         console.log(possible);
