@@ -1,4 +1,3 @@
-
 let carat="█"
 let prompt;
 var currentdir=[]
@@ -19,8 +18,6 @@ let filesystem = {
     }
 }
 
-//lol stolen func
-//apparently we're just code theives now
 function setEndOfContenteditable(contentEditableElement)
 {
     var range,selection;
@@ -132,7 +129,6 @@ function invoke_command(){
         }
     }
 
-    // Idk what this does but apparently it won't work without it so
     document.getElementById("history").innerHTML=document.getElementById("history").innerHTML.concat('<br>',output,(output.length>0)? '<br>' :'' , prompt)
     let newprompt = document.getElementsByClassName('command')[document.getElementsByClassName('command').length-1]
     newprompt.focus();
