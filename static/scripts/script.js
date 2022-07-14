@@ -251,7 +251,7 @@ var cat = new Command(
             if (current[args].constructor != Object){
                 let dir = currentdir.join("/")
                 res = ""
-                let path = "".concat("/HelpfulLegitamateDatamart/root/", dir, (dir!="") ? "/" : "", current[args])
+                let path = "".concat("/root/", dir, (dir!="") ? "/" : "", current[args])
                 var xhr = new XMLHttpRequest();
                 xhr.open("GET", path, false)
                 xhr.onload = function (e){
